@@ -1,13 +1,25 @@
 
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { BookOpen } from "lucide-react";
+import { BookOpen, ArrowLeft } from "lucide-react";
 
 const Index = () => {
   const navigate = useNavigate();
   
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-library-50 to-library-100">
+      <div className="w-full max-w-7xl px-4">
+        <Button 
+          variant="outline" 
+          size="sm"
+          className="mb-4"
+          onClick={() => navigate(-1)}
+        >
+          <ArrowLeft className="h-4 w-4 mr-2" />
+          Back
+        </Button>
+      </div>
+      
       <div className="text-center mb-8">
         <div className="flex items-center justify-center mb-4">
           <BookOpen className="h-16 w-16 text-library-700" />
@@ -38,7 +50,7 @@ const Index = () => {
       </div>
       
       <footer className="mt-16 text-center text-sm text-library-500">
-        <p>© 2023 Library Management System. All rights reserved.</p>
+        {/* Copyright text has been removed */}
       </footer>
     </div>
   );
