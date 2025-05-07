@@ -37,16 +37,6 @@ const Index = () => {
         </Button>
       </div>
       
-      <div className="mt-8">
-        <Button 
-          variant="outline" 
-          className="border-library-300 hover:bg-library-100"
-          onClick={() => navigate("/flow-chart")}
-        >
-          View Flow Chart
-        </Button>
-      </div>
-      
       <footer className="mt-16 text-center text-sm text-library-500">
         <p>© 2023 Library Management System. All rights reserved.</p>
       </footer>

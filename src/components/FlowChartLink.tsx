@@ -1,12 +1,9 @@
 
 import { Link } from "react-router-dom";
 
+// This component is no longer used
 const FlowChartLink = () => {
-  return (
-    <Link to="/flow-chart" className="flow-chart-link fixed top-2 right-2">
-      View Flow Chart
-    </Link>
-  );
+  return null;
 };
 
 export default FlowChartLink;

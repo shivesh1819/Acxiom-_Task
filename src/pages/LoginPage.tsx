@@ -8,7 +8,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { BookOpen } from "lucide-react";
-import FlowChartLink from "@/components/FlowChartLink";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -55,8 +54,6 @@ const LoginPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-library-50 to-library-100">
-      <FlowChartLink />
-      
       <div className="flex items-center mb-8">
         <BookOpen className="h-8 w-8 text-library-700 mr-2" />
         <h1 className="text-2xl font-bold text-library-950">Library Management System</h1>

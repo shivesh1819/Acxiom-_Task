@@ -1,6 +1,5 @@
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import FlowChartLink from "@/components/FlowChartLink";
 import Navigation from "@/components/Navigation";
 import { useAuth } from "@/contexts/AuthContext";
 import { BookOpen, ClipboardCheck, BarChart3, Check, X } from "lucide-react";
@@ -12,7 +11,6 @@ const UserDashboard = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
-      <FlowChartLink />
       
       <div className="container mx-auto py-8 px-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">

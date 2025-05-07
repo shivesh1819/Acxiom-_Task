@@ -10,7 +10,6 @@ import ProtectedRoute from "./components/ProtectedRoute";
 // Pages
 import Index from "./pages/Index";
 import LoginPage from "./pages/LoginPage";
-import FlowChartPage from "./pages/FlowChartPage";
 import UnauthorizedPage from "./pages/UnauthorizedPage";
 import NotFound from "./pages/NotFound";
 
@@ -38,7 +37,6 @@ const App = () => (
             {/* Public Routes */}
             <Route path="/" element={<Index />} />
             <Route path="/login" element={<LoginPage />} />
-            <Route path="/flow-chart" element={<FlowChartPage />} />
             <Route path="/unauthorized" element={<UnauthorizedPage />} />
             
             {/* Admin Routes */}
