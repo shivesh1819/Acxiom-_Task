@@ -27,7 +27,17 @@ const UnauthorizedPage = () => {
           You don't have permission to access this page. Please contact an administrator if you believe this is a mistake.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <Button onClick={goToDashboard}>
+          <Button 
+            onClick={() => navigate(-1)}
+            className="flex items-center gap-2"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Go Back
+          </Button>
+          <Button 
+            variant="outline" 
+            onClick={goToDashboard}
+          >
             Return to Dashboard
           </Button>
         </div>

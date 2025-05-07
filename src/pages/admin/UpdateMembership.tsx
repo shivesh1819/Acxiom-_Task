@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -6,7 +5,6 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import FlowChartLink from "@/components/FlowChartLink";
 import Navigation from "@/components/Navigation";
 import { ArrowLeft, Save, Search, UserRound } from "lucide-react";
 import { toast } from "sonner";
@@ -147,16 +145,15 @@ const UpdateMembership = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
-      <FlowChartLink />
       
       <div className="container mx-auto py-8 px-4">
         <div className="mb-6 flex items-center">
           <Button 
             variant="outline"
-            onClick={() => navigate("/admin/dashboard")}
-            className="mr-4"
+            onClick={() => navigate(-1)}
+            className="flex items-center gap-2 mr-4"
           >
-            <ArrowLeft className="h-4 w-4 mr-2" />
+            <ArrowLeft className="h-4 w-4" />
             Back
           </Button>
           <h1 className="text-2xl font-bold text-gray-800">Update Membership</h1>

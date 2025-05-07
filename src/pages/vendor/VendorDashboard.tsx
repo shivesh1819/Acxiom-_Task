@@ -3,17 +3,29 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import { useAuth } from "@/contexts/AuthContext";
-import { Package, FileText, Book, TrendingUp } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Package, FileText, Book, TrendingUp, ArrowLeft } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
 const VendorDashboard = () => {
   const { user } = useAuth();
+  const navigate = useNavigate();
   
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
       
       <div className="container mx-auto py-8 px-4">
+        <div className="mb-4">
+          <Button 
+            variant="outline"
+            onClick={() => navigate(-1)}
+            className="flex items-center gap-2"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back
+          </Button>
+        </div>
+        
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
           <div>
             <h1 className="text-3xl font-bold text-gray-800">Vendor Dashboard</h1>

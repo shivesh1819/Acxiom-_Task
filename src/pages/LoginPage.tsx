@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { BookOpen } from "lucide-react";
+import { BookOpen, ArrowLeft } from "lucide-react";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -54,6 +54,17 @@ const LoginPage = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-library-50 to-library-100">
+      <div className="w-full max-w-md px-4 mb-4">
+        <Button 
+          variant="outline" 
+          onClick={() => navigate(-1)}
+          className="flex items-center gap-2 bg-white/80"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Back
+        </Button>
+      </div>
+      
       <div className="flex items-center mb-8">
         <BookOpen className="h-8 w-8 text-library-700 mr-2" />
         <h1 className="text-2xl font-bold text-library-950">Library Management System</h1>
